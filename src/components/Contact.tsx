@@ -30,7 +30,7 @@ const Contact = () => {
         >
           <h2 className="text-5xl md:text-6xl text-primary-foreground mb-4">NA KONTAKTONI</h2>
           <p className="font-body text-primary-foreground/70 max-w-xl mx-auto">
-            Jeni gati të filloni projektin tuaj? Na kontaktoni për një ofertë falas.
+            Jeni gati të filloni projektin tuaj? Na kontaktoni per me shume informacion.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ const Contact = () => {
             }`}
           >
             {[
-              { icon: MapPin, label: "Adresa", value: "Rruga e Kavajës, Tiranë, Shqipëri" },
+              { icon: MapPin, label: "Adresa", value: ",Tiranë, Shqipëri" },
               { icon: Phone, label: "Telefon", value: "+355 69 XXX XXXX" },
               { icon: Mail, label: "Email", value: "info@skelabuild.al" },
               { icon: Clock, label: "Orari", value: "E Hënë - E Shtunë: 08:00 - 17:00" },
