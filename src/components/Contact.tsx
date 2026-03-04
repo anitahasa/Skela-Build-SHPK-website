@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
+  const { ref: infoRef, isVisible: infoVisible } = useScrollReveal();
+  const { ref: formRef, isVisible: formVisible } = useScrollReveal<HTMLFormElement>();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +22,12 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-primary">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-700 ${
+            headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <h2 className="text-5xl md:text-6xl text-primary-foreground mb-4">NA KONTAKTONI</h2>
           <p className="font-body text-primary-foreground/70 max-w-xl mx-auto">
             Jeni gati të filloni projektin tuaj? Na kontaktoni për një ofertë falas.
@@ -26,8 +35,12 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Info */}
-          <div className="space-y-8">
+          <div
+            ref={infoRef}
+            className={`space-y-8 transition-all duration-1000 ${
+              infoVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
+            }`}
+          >
             {[
               { icon: MapPin, label: "Adresa", value: "Rruga e Kavajës, Tiranë, Shqipëri" },
               { icon: Phone, label: "Telefon", value: "+355 69 XXX XXXX" },
@@ -47,7 +60,6 @@ const Contact = () => {
               </div>
             ))}
 
-            {/* Map embed */}
             <div className="rounded-lg overflow-hidden border border-border/20 h-52">
               <iframe
                 title="Lokacioni"
@@ -59,8 +71,13 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className={`space-y-6 transition-all duration-1000 delay-200 ${
+              formVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
+            }`}
+          >
             {[
               { key: "name", label: "Emri juaj", type: "text" },
               { key: "email", label: "Email", type: "email" },
