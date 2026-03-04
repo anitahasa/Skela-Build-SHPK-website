@@ -1,11 +1,20 @@
 import aboutImg from "@/assets/about-construction.jpg";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const About = () => {
+  const { ref: imgRef, isVisible: imgVisible } = useScrollReveal();
+  const { ref: textRef, isVisible: textVisible } = useScrollReveal();
+
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="overflow-hidden rounded-lg">
+          <div
+            ref={imgRef}
+            className={`overflow-hidden rounded-lg transition-all duration-1000 ${
+              imgVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"
+            }`}
+          >
             <img
               src={aboutImg}
               alt="Rreth Skela&Build"
@@ -13,7 +22,12 @@ const About = () => {
             />
           </div>
 
-          <div>
+          <div
+            ref={textRef}
+            className={`transition-all duration-1000 delay-200 ${
+              textVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-16"
+            }`}
+          >
             <h2 className="text-5xl md:text-6xl text-foreground mb-6">RRETH NESH</h2>
             <p className="font-body text-muted-foreground leading-relaxed mb-6">
               <strong className="text-foreground">Skela&Build shpk</strong> është një kompani ndërtimi me përvojë
