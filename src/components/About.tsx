@@ -29,10 +29,8 @@ const About = () => {
             }>
             
             <h2 className="text-5xl md:text-6xl text-foreground mb-6">RRETH NESH</h2>
-            <p className="font-body text-muted-foreground leading-relaxed mb-6">Skela&Build SHPK është një kompani e re në tregun shqiptar e themeluar ne vitin 2026, me fokus ne cilesi, siguri dhe korrektesi ne cdo projekt ndertimi dhe ofrim skelash me qera.
- Operojme ne Durres dhe Tirane duke garantuar sherbim te shpejte dhe profesional.<strong className="text-foreground">Skela&Build shpk</strong> është një kompani ndërtimi me përvojë
-              shumëvjeçare në tregun shqiptar. Jemi të specializuar në ndërtimin e objekteve rezidenciale,
-              komerciale dhe industriale.
+            <p className="font-body text-muted-foreground leading-relaxed mb-6">Skela&Build SHPK është një kompani e re në tregun shqiptar e themeluar ne vitin 2026, me fokus ne cilesi, siguri dhe korrektesi ne cdo projekt ndertimi dhe ofrim skelash me qera. Operojme ne Durres dhe Tirane duke garantuar sherbim te shpejte dhe profesional.
+              <br />Jemi të specializuar në ndërtimin e objekteve rezidenciale, komerciale dhe industriale.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed mb-8">
               Ekipi ynë i profesionistëve të kualifikuar garanton cilësi të lartë, afate të respektuara dhe
