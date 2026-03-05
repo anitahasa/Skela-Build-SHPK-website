@@ -14,28 +14,16 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-border/20">
-      <div className="container mx-auto flex items-center justify-center relative px-4 h-28">
-        {/* Desktop nav - left */}
-        <ul className="hidden md:flex items-center gap-8 absolute left-4">
-          {navItems.slice(0, 2).map((item) =>
-          <li key={item.href}>
-              <a
-              href={item.href}
-              className="font-body text-sm font-semibold uppercase tracking-widest text-primary-foreground/80 hover:text-accent transition-colors">
-                {item.label}
-              </a>
-            </li>
-          )}
-        </ul>
-
-        {/* Centered logo */}
+      <div className="container mx-auto flex items-center justify-center md:justify-between relative px-4 h-28">
+        {/* Logo - left on desktop, center on mobile */}
         <a href="#hero" className="flex items-center">
           <img src={logo} alt="Skela&Build logo" className="h-28 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
         </a>
 
-        {/* Desktop nav - right */}
-        <ul className="hidden md:flex items-center gap-8 absolute right-4">
-          {navItems.slice(2).map((item) =>
+        {/* Desktop nav */}
+        <ul className="hidden md:flex items-center gap-8">
+
+          {navItems.map((item) =>
           <li key={item.href}>
               <a
               href={item.href}
