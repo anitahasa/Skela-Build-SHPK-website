@@ -6,7 +6,7 @@ const Hero = () => {
   const { ref, isVisible } = useScrollReveal(0.1);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28">
       <div className="absolute inset-0">
         <img src={heroImg} alt="Kantier ndërtimi" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-primary/70" />
