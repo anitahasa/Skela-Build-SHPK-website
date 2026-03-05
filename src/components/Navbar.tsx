@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-border/20">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <a href="#hero" className="flex items-center gap-2">
-          <img src={logo} alt="Skela&Build logo" className="h-20 w-auto" />
+          <img src={logo} alt="Skela&Build logo" className="h-20 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
         </a>
 
         {/* Desktop */}
