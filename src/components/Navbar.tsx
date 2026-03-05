@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-border/20">
-      <div className="container mx-auto flex items-center justify-center relative py-1 px-4 h-14">
+      <div className="container mx-auto flex items-center justify-center relative px-4 h-28">
         {/* Desktop nav - left */}
         <ul className="hidden md:flex items-center gap-8 absolute left-4">
           {navItems.slice(0, 2).map((item) =>
@@ -28,8 +28,8 @@ const Navbar = () => {
           )}
         </ul>
 
-        {/* Centered logo - overflows below navbar */}
-        <a href="#hero" className="flex items-center absolute top-full -translate-y-1/2 z-50">
+        {/* Centered logo */}
+        <a href="#hero" className="flex items-center">
           <img src={logo} alt="Skela&Build logo" className="h-28 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
         </a>
 
