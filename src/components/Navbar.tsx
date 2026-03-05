@@ -14,19 +14,32 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-border/20">
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#hero" className="flex items-center gap-2">
-          <img src={logo} alt="Skela&Build logo" className="h-20 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] border-0 border-primary rounded-none" />
-        </a>
-
-        {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navItems.map((item) =>
+      <div className="container mx-auto flex items-center justify-center relative py-2 px-4">
+        {/* Desktop nav - left */}
+        <ul className="hidden md:flex items-center gap-8 absolute left-4">
+          {navItems.slice(0, 2).map((item) =>
           <li key={item.href}>
               <a
               href={item.href}
               className="font-body text-sm font-semibold uppercase tracking-widest text-primary-foreground/80 hover:text-accent transition-colors">
-              
+                {item.label}
+              </a>
+            </li>
+          )}
+        </ul>
+
+        {/* Centered logo */}
+        <a href="#hero" className="flex items-center">
+          <img src={logo} alt="Skela&Build logo" className="h-28 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
+        </a>
+
+        {/* Desktop nav - right */}
+        <ul className="hidden md:flex items-center gap-8 absolute right-4">
+          {navItems.slice(2).map((item) =>
+          <li key={item.href}>
+              <a
+              href={item.href}
+              className="font-body text-sm font-semibold uppercase tracking-widest text-primary-foreground/80 hover:text-accent transition-colors">
                 {item.label}
               </a>
             </li>
@@ -34,7 +47,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-primary-foreground" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-primary-foreground absolute right-4" onClick={() => setOpen(!open)}>
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
