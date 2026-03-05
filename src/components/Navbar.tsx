@@ -28,9 +28,9 @@ const Navbar = () => {
           )}
         </ul>
 
-        {/* Centered logo */}
-        <a href="#hero" className="flex items-center">
-          <img src={logo} alt="Skela&Build logo" className="h-16 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
+        {/* Centered logo - overflows below navbar */}
+        <a href="#hero" className="flex items-center absolute top-full -translate-y-1/2 z-50">
+          <img src={logo} alt="Skela&Build logo" className="h-28 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
         </a>
 
         {/* Desktop nav - right */}
