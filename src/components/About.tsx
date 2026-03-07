@@ -39,17 +39,6 @@ Për shumë vite kemi ushtruar profesionin tonë me standarde të larta dhe cil�
               Aktualisht <strong className="text-foreground">Skela e Build SHPK</strong> disponon rreth <strong className="text-foreground">3000 m² skela profesionale</strong> në dispozicion të klientëve. Për projekte më të mëdha, kompania ka mundësinë të <strong className="text-accent">importojë deri në tre herë më shumë skela</strong>, duke garantuar që çdo projekt të realizohet pa vonesa dhe sipas nevojave të klientit.
             </p>
 
-            <p className="font-body text-muted-foreground leading-relaxed mb-4">
-              Ne punojmë çdo ditë për të ofruar:
-            </p>
-            <ul className="font-body text-muted-foreground space-y-2 mb-8 list-none">
-              {["Standarde të larta europiane", "Siguri dhe profesionalizëm në çdo projekt"].map((item) =>
-              <li key={item} className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
-                  <strong className="text-foreground">{item}</strong>
-                </li>
-              )}
-            </ul>
 
             <div className="grid grid-cols-3 gap-6">
               {[
