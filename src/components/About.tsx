@@ -43,7 +43,7 @@ Për shumë vite kemi ushtruar profesionin tonë me standarde të larta dhe cil�
               Ne punojmë çdo ditë për të ofruar:
             </p>
             <ul className="font-body text-muted-foreground space-y-2 mb-8 list-none">
-              {["Cilësi të lartë", "Shpejtësi në realizimin e punimeve", "Standarde të larta europiane", "Siguri dhe profesionalizëm në çdo projekt"].map((item) =>
+              {["Standarde të larta europiane", "Siguri dhe profesionalizëm në çdo projekt"].map((item) =>
               <li key={item} className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                   <strong className="text-foreground">{item}</strong>
