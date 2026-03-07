@@ -29,8 +29,8 @@ const About = () => {
             }>
             
             <h2 className="text-5xl md:text-6xl text-foreground mb-6">RRETH NESH</h2>
-            <p className="font-body text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Skela e Build SHPK</strong> është një kompani e hapur në Shqipëri në <strong className="text-foreground">02.2026</strong>, pas më shumë se <strong className="text-foreground">12 vitesh eksperiencë pune në Europë</strong> në sektorin e ndërtimit dhe të sistemeve të skelave profesionale. Për shumë vite kemi ushtruar profesionin tonë me standarde të larta dhe cilësi të veçantë në vende si <strong className="text-foreground">Zvicra, Italia, Gjermania dhe Austria</strong>, duke fituar përvojë të vlefshme dhe praktika moderne pune.
+            <p className="font-body text-muted-foreground leading-relaxed mb-4">Skela e Build SHPK është një kompani e hapur në Shqipëri në 02.2026, pas më shumë se 12 vitesh eksperiencë pune në Europë në sektorin e ndërtimit dhe të sistemeve të skelave profesionale. 
+Për shumë vite kemi ushtruar profesionin tonë me standarde të larta dhe cilësi të veçantë në vende si Zvicra, Italia, Gjermania dhe Austria, duke fituar përvojë të vlefshme dhe praktika moderne pune.<strong className="text-foreground">Skela e Build SHPK</strong> është një kompani e hapur në Shqipëri në <strong className="text-foreground">02.2026</strong>, pas më shumë se <strong className="text-foreground">12 vitesh eksperiencë pune në Europë</strong> në sektorin e ndërtimit dhe të sistemeve të skelave profesionale. Për shumë vite kemi ushtruar profesionin tonë me standarde të larta dhe cilësi të veçantë në vende si <strong className="text-foreground">Zvicra, Italia, Gjermania dhe Austria</strong>, duke fituar përvojë të vlefshme dhe praktika moderne pune.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed mb-4">
               Kompania është themeluar nga <strong className="text-foreground">grupe profesionistësh të fushës së ndërtimit dhe të sistemeve të skelave me qira</strong>, të cilët kanë bashkuar eksperiencën dhe njohuritë e tyre për të sjellë në tregun shqiptar një shërbim profesional dhe të besueshëm.
@@ -43,12 +43,12 @@ const About = () => {
               Ne punojmë çdo ditë për të ofruar:
             </p>
             <ul className="font-body text-muted-foreground space-y-2 mb-8 list-none">
-              {["Cilësi të lartë", "Shpejtësi në realizimin e punimeve", "Standarde të larta europiane", "Siguri dhe profesionalizëm në çdo projekt"].map((item) => (
-                <li key={item} className="flex items-center gap-2">
+              {["Cilësi të lartë", "Shpejtësi në realizimin e punimeve", "Standarde të larta europiane", "Siguri dhe profesionalizëm në çdo projekt"].map((item) =>
+              <li key={item} className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                   <strong className="text-foreground">{item}</strong>
                 </li>
-              ))}
+              )}
             </ul>
 
             <div className="grid grid-cols-3 gap-6">
