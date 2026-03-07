@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default {
-  base: '/Skela-Build-SHPK-website/',{
+  base: '/Skela-Build-SHPK-website/',
   server: {
     host: "::",
     port: 8080,
