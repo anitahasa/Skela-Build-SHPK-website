@@ -63,7 +63,7 @@ const Contact = () => {
             <div
               className="rounded-lg overflow-hidden border border-border/20 h-52"
               dangerouslySetInnerHTML={{
-                __html: `<iframe title="Lokacioni" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.0!2d19.4547!3d41.3233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE5JzI0LjAiTiAxOcKwMjcnMTcuMCJF!5e0!3m2!1sen!2sal!4v1" class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+                __html: `<iframe title="Lokacioni" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.0!2d19.4189!3d41.2870!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE3JzEzLjIiTiAxOcKwMjUnMDguMCJF!5e0!3m2!1sen!2sal!4v1" class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
               }}
             />
           </div>
