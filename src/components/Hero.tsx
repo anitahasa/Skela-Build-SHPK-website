@@ -18,7 +18,9 @@ const Hero = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <img src={logo} alt="Skela&Build logo" className="h-32 md:h-40 lg:h-48 w-auto mx-auto mb-6 drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]" />
+        <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-primary-foreground leading-none mb-6">
+          SKELA<span className="text-accent">&</span>BUILD
+        </h1>
         <p className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10">
           Ndërtojmë të ardhmen tuaj — me cilësi, siguri dhe profesionalizëm. Partneri juaj i besueshëm në ndërtim.
         </p>
