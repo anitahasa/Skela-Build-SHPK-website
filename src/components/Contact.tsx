@@ -63,7 +63,7 @@ const Contact = () => {
             <div
               className="rounded-lg overflow-hidden border border-border/20 h-52"
               dangerouslySetInnerHTML={{
-                __html: `<iframe title="Lokacioni" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500.0!2d19.4803!3d41.3122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE4JzQ0LjAiTiAxOcKwMjgnNDkuMCJF!5e0!3m2!1sen!2sal!4v1" class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+                __html: `<iframe title="Lokacioni" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2208.4580504682554!2d19.48276010114124!3d41.31215995095159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134fd98e2cc63ad5%3A0x7c12388cd10d2a69!2sRruga%20Pelikan%2C%20Durr%C3%ABs%2C%20Albania!5e0!3m2!1sen!2s!4v1772912380082!5m2!1sen!2s" class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
               }}
             />
           </div>
