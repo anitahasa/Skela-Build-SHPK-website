@@ -42,8 +42,8 @@ const Contact = () => {
             }`}
           >
             {[
-              { icon: MapPin, label: "Adresa", value: ",Tiranë, Shqipëri" },
-              { icon: Phone, label: "Telefon", value: "+355 69 XXX XXXX" },
+              { icon: MapPin, label: "Adresa", value: "Rrota e Kuqe, Lagja 13, Durres" },
+              { icon: Phone, label: "Telefon", value: "+355 69 755 3844" },
               { icon: Mail, label: "Email", value: "info@skelabuild.al" },
               { icon: Clock, label: "Orari", value: "E Hënë - E Shtunë: 08:00 - 17:00" },
             ].map((item) => (
