@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
@@ -12,9 +12,31 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate inputs
+    const name = form.name.trim();
+    const email = form.email.trim();
+    const phone = form.phone.trim();
+    const message = form.message.trim();
+    
+    if (!name || !email || !message) {
+      toast({
+        title: "Plotësoni fushat e detyrueshme",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Build WhatsApp message
+    const whatsappNumber = "355697553844";
+    const text = `Pershendetje Skela&Build!%0A%0AEmri: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0ATelefon: ${encodeURIComponent(phone)}%0A%0A${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
+    
+    window.open(whatsappUrl, "_blank");
+    
     toast({
-      title: "Mesazhi u dërgua!",
-      description: "Do t'ju kontaktojmë sa më shpejt. Faleminderit!",
+      title: "Po hapim WhatsApp...",
+      description: "Mesazhi juaj do të dërgohet përmes WhatsApp.",
     });
     setForm({ name: "", email: "", phone: "", message: "" });
   };
@@ -107,9 +129,10 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full px-8 py-4 bg-accent text-accent-foreground font-heading text-xl tracking-wide rounded hover:brightness-110 transition"
+              className="w-full px-8 py-4 bg-green-600 text-white font-heading text-xl tracking-wide rounded hover:bg-green-700 transition flex items-center justify-center gap-3"
             >
-              DËRGO MESAZHIN
+              <MessageCircle className="w-6 h-6" />
+              DËRGO NË WHATSAPP
             </button>
           </form>
         </div>
