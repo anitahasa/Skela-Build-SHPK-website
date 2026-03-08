@@ -18,7 +18,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img src={heroImg} alt="Kantier ndërtimi" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-primary/70" />
@@ -32,7 +32,7 @@ const Hero = () => {
       >
         {/* Hero logo - fades out on scroll */}
         <div
-          className="flex justify-center mb-6 transition-transform duration-300"
+          className="flex justify-center mb-2 transition-transform duration-300"
           style={{ opacity: logoOpacity, transform: `scale(${0.8 + logoOpacity * 0.2})` }}
         >
           <img
