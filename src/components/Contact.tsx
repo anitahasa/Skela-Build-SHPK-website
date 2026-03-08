@@ -129,9 +129,10 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full px-8 py-4 bg-accent text-accent-foreground font-heading text-xl tracking-wide rounded hover:brightness-110 transition"
+              className="w-full px-8 py-4 bg-green-600 text-white font-heading text-xl tracking-wide rounded hover:bg-green-700 transition flex items-center justify-center gap-3"
             >
-              DËRGO MESAZHIN
+              <MessageCircle className="w-6 h-6" />
+              DËRGO NË WHATSAPP
             </button>
           </form>
         </div>
