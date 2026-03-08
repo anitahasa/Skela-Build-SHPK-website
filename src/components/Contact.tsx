@@ -12,9 +12,31 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate inputs
+    const name = form.name.trim();
+    const email = form.email.trim();
+    const phone = form.phone.trim();
+    const message = form.message.trim();
+    
+    if (!name || !email || !message) {
+      toast({
+        title: "Plotësoni fushat e detyrueshme",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Build WhatsApp message
+    const whatsappNumber = "355697553844";
+    const text = `Pershendetje Skela&Build!%0A%0AEmri: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0ATelefon: ${encodeURIComponent(phone)}%0A%0A${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
+    
+    window.open(whatsappUrl, "_blank");
+    
     toast({
-      title: "Mesazhi u dërgua!",
-      description: "Do t'ju kontaktojmë sa më shpejt. Faleminderit!",
+      title: "Po hapim WhatsApp...",
+      description: "Mesazhi juaj do të dërgohet përmes WhatsApp.",
     });
     setForm({ name: "", email: "", phone: "", message: "" });
   };
