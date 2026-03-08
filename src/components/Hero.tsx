@@ -26,7 +26,7 @@ const Hero = () => {
 
       <div
         ref={ref}
-        className={`relative z-10 container mx-auto px-4 text-center transition-all duration-1000 ${
+        className={`relative z-10 container mx-auto px-4 text-center -mt-24 transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
