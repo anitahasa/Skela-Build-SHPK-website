@@ -1,8 +1,21 @@
+import { useState, useEffect } from "react";
 import heroImg from "@/assets/hero-construction.jpg";
+import logo from "@/assets/logo.png";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const Hero = () => {
   const { ref, isVisible } = useScrollReveal(0.1);
+  const [logoOpacity, setLogoOpacity] = useState(1);
+
+  useEffect(() => {
+    const onScroll = () => {
+      // Fade out hero logo as user scrolls (0-200px range)
+      const opacity = Math.max(0, 1 - window.scrollY / 200);
+      setLogoOpacity(opacity);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
@@ -17,6 +30,18 @@ const Hero = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
+        {/* Hero logo - fades out on scroll */}
+        <div
+          className="flex justify-center mb-6 transition-transform duration-300"
+          style={{ opacity: logoOpacity, transform: `scale(${0.8 + logoOpacity * 0.2})` }}
+        >
+          <img
+            src={logo}
+            alt="Skela & Build Logo"
+            className="h-24 md:h-32 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+          />
+        </div>
+
         <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-primary-foreground leading-none mb-6">
           SKELA<span className="text-accent">&</span>BUILD
         </h1>

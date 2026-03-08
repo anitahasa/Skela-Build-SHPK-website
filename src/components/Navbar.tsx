@@ -12,9 +12,14 @@ const navItems = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showNavLogo, setShowNavLogo] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+      // Show logo in navbar when hero logo scrolls out of view (~200px)
+      setShowNavLogo(window.scrollY > 200);
+    };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -39,7 +44,9 @@ const Navbar = () => {
         {/* Logo - centered on mobile, left on desktop */}
         <a
           href="#hero"
-          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mr-auto flex items-center z-10"
+          className={`absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mr-auto flex items-center z-10 transition-all duration-500 ${
+            showNavLogo ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"
+          }`}
         >
           <img
             src={logo}
