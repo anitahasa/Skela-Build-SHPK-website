@@ -45,7 +45,7 @@ const Navbar = () => {
         <a
           href="#hero"
           className={`absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mr-auto flex items-center z-10 transition-all duration-500 ${
-            showNavLogo ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"
+            showNavLogo ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none md:opacity-100 md:scale-100 md:pointer-events-auto"
           }`}
         >
           <img
