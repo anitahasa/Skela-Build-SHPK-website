@@ -38,7 +38,7 @@ const Hero = () => {
           <img
             src={logo}
             alt="Skela & Build Logo"
-            className="h-48 md:h-56 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+            className="h-48 md:h-32 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]"
           />
         </div>
 
