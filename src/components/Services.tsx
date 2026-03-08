@@ -3,7 +3,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const services = [
   { icon: Building2, title: "Ndërtim Banesash", desc: "Ndërtojmë banesa moderne rezidenciale dhe apartamente me standarde të larta cilësie." },
-  { icon: HardHat, title: "Skela & Struktura", desc: "Montim dhe çmontim skelash profesionale për çdo lloj projekti ndërtimi." },
+  { icon: HardHat, title: "Skela & Struktura", desc: "Skela me qera. Montim dhe cmontim skelash per cdo lloj projekt ndertimi." },
   { icon: Ruler, title: "Projektim", desc: "Shërbime projektimi arkitekturor dhe inxhinierik për projekte të çdo shkalle." },
   { icon: Wrench, title: "Rikonstruksion", desc: "Rinovim dhe rikonstruksion i objekteve ekzistuese me materiale të cilësisë së lartë." },
   { icon: Truck, title: "Transport Materialesh", desc: "Transport i sigurt dhe i shpejtë i materialeve të ndërtimit në çdo lokacion." },
