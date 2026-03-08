@@ -21,20 +21,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
         scrolled
           ? "bg-primary/95 backdrop-blur-md shadow-lg shadow-primary/20 h-16"
           : "bg-primary/80 backdrop-blur-sm h-24 md:h-28"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-4 h-full">
-        {/* Spacer to balance hamburger on mobile */}
-        <div className="w-10 md:hidden" />
-
-        {/* Logo - centered on mobile, left on desktop */}
+      <div className="container mx-auto relative flex items-center justify-center md:justify-between px-4 h-full">
+        {/* Logo - perfectly centered on mobile, left on desktop */}
         <a
           href="#hero"
-          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center"
+          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mr-auto flex items-center z-10"
         >
           <img
             src={logo}
@@ -62,7 +59,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-primary-foreground p-2 rounded-full hover:bg-white/10 transition-colors"
+          className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 text-primary-foreground p-2 rounded-full hover:bg-white/10 transition-colors z-20"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
