@@ -27,17 +27,25 @@ const Navbar = () => {
           : "bg-transparent h-24 md:h-28"
       }`}
     >
-      <div className="container mx-auto relative flex items-center justify-center md:justify-between px-4 h-full">
-        {/* Logo - perfectly centered on mobile, left on desktop */}
+      <div className="container mx-auto relative flex items-center justify-between px-4 h-full">
+        {/* Mobile toggle - LEFT side */}
+        <button
+          className="md:hidden text-primary-foreground p-2 rounded-full hover:bg-white/10 transition-colors z-20"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Logo - centered on mobile, left on desktop */}
         <a
           href="#hero"
-          className="hidden md:flex absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mr-auto items-center z-10"
+          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mr-auto flex items-center z-10"
         >
           <img
             src={logo}
             alt="Skela&Build logo"
             className={`w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-500 ${
-              scrolled ? "h-14" : "h-28"
+              scrolled ? "h-12 md:h-14" : "h-20 md:h-28"
             }`}
           />
         </a>
@@ -57,13 +65,8 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 text-primary-foreground p-2 rounded-full hover:bg-white/10 transition-colors z-20"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Spacer for mobile to balance hamburger on left */}
+        <div className="w-10 md:hidden" />
       </div>
 
       {/* Mobile menu */}
