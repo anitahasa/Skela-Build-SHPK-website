@@ -24,26 +24,29 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-primary/95 backdrop-blur-md shadow-lg shadow-primary/20 h-16"
-          : "bg-transparent h-28"
-      } ${scrolled || open ? "bg-primary/95 backdrop-blur-md" : ""}`}
+          : "bg-primary/80 backdrop-blur-sm h-24 md:h-28"
+      }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-6 h-full">
-        {/* Spacer for mobile centering */}
-        <div className="md:hidden w-10" />
+      <div className="container mx-auto flex items-center justify-between px-4 h-full">
+        {/* Spacer to balance hamburger on mobile */}
+        <div className="w-10 md:hidden" />
 
         {/* Logo - centered on mobile, left on desktop */}
-        <a href="#hero" className="flex items-center md:mr-auto">
+        <a
+          href="#hero"
+          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center"
+        >
           <img
             src={logo}
             alt="Skela&Build logo"
             className={`w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-500 ${
-              scrolled ? "h-14" : "h-28"
+              scrolled ? "h-12 md:h-14" : "h-20 md:h-28"
             }`}
           />
         </a>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-1">
+        <ul className="hidden md:flex items-center gap-1 ml-auto">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
@@ -72,7 +75,7 @@ const Navbar = () => {
           open ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-primary/98 backdrop-blur-md border-t border-white/10 pb-6">
+        <div className="bg-primary/95 backdrop-blur-md border-t border-white/10 pb-6">
           <ul className="flex flex-col items-center gap-2 pt-4">
             {navItems.map((item) => (
               <li key={item.href}>
