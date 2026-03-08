@@ -1,29 +1,19 @@
 import heroImg from "@/assets/hero-construction.jpg";
-import logo from "@/assets/logo.png";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const Hero = () => {
   const { ref, isVisible } = useScrollReveal(0.1);
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden pt-6">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img src={heroImg} alt="Kantier ndërtimi" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-primary/70" />
       </div>
 
-      {/* Logo centered at top */}
-      <div className="relative z-10 mt-4 mb-6">
-        <img
-          src={logo}
-          alt="Skela&Build logo"
-          className="h-28 md:h-36 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]"
-        />
-      </div>
-
       <div
         ref={ref}
-        className={`relative z-10 container mx-auto px-4 text-center transition-all duration-1000 ${
+        className={`relative z-10 container mx-auto px-4 text-center -mt-16 transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
