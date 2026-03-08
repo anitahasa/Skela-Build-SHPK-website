@@ -64,7 +64,7 @@ const Contact = () => {
             }`}
           >
             {[
-              { icon: MapPin, label: "Adresa", value: "Rrota e Kuqe, Lagja 13, Durres" },
+              { icon: MapPin, label: "Adresa", value: "Lagja 13, Plazh, Durres" },
               { icon: Phone, label: "Telefon", value: "+355 69 755 3844" },
               { icon: Mail, label: "Email", value: "skelabuild@outlook.com" },
               { icon: Clock, label: "Orari", value: "E Hënë - E Shtunë: 08:00 - 17:00" },
