@@ -43,10 +43,8 @@ const Navbar = () => {
         >
           <img
             src={logo}
-            alt="Skela&Build logo"
-            className={`w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-500 ${
-              scrolled || open ? "h-12 md:h-14" : "h-[50px] md:h-28"
-            }`}
+            alt="Skela & Build Logo"
+            className="h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"
           />
         </a>
 
