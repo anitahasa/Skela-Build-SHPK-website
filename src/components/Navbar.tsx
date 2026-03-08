@@ -45,7 +45,7 @@ const Navbar = () => {
             src={logo}
             alt="Skela&Build logo"
             className={`w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-500 ${
-              scrolled ? "h-12 md:h-14" : "h-20 md:h-28"
+              scrolled || open ? "h-12 md:h-14" : "h-20 md:h-28"
             }`}
           />
         </a>
