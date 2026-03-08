@@ -7,13 +7,18 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+const configuredBase = import.meta.env.BASE_URL || "/";
+const routerBase =
+  typeof window !== "undefined" && window.location.pathname.startsWith(configuredBase)
+    ? configuredBase
+    : "/";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={routerBase}>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
