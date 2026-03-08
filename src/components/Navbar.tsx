@@ -25,11 +25,14 @@ const Navbar = () => {
         scrolled
           ? "bg-primary/95 backdrop-blur-md shadow-lg shadow-primary/20 h-16"
           : "bg-transparent h-28"
-      }`}
+      } ${scrolled || open ? "bg-primary/95 backdrop-blur-md" : ""}`}
     >
-      <div className="container mx-auto flex items-center justify-center md:justify-between relative px-6 h-full">
-        {/* Logo - left on desktop, center on mobile */}
-        <a href="#hero" className="flex items-center">
+      <div className="container mx-auto flex items-center justify-between px-6 h-full">
+        {/* Spacer for mobile centering */}
+        <div className="md:hidden w-10" />
+
+        {/* Logo - centered on mobile, left on desktop */}
+        <a href="#hero" className="flex items-center md:mr-auto">
           <img
             src={logo}
             alt="Skela&Build logo"
@@ -56,7 +59,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-primary-foreground absolute right-4 p-2 rounded-full hover:bg-white/10 transition-colors"
+          className="md:hidden text-primary-foreground p-2 rounded-full hover:bg-white/10 transition-colors"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
