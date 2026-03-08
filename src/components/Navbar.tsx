@@ -31,13 +31,13 @@ const Navbar = () => {
         {/* Logo - perfectly centered on mobile, left on desktop */}
         <a
           href="#hero"
-          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mr-auto flex items-center z-10"
+          className="hidden md:flex absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mr-auto items-center z-10"
         >
           <img
             src={logo}
             alt="Skela&Build logo"
             className={`w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-500 ${
-              scrolled ? "h-12 md:h-14" : "h-20 md:h-28"
+              scrolled ? "h-14" : "h-28"
             }`}
           />
         </a>
