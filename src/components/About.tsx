@@ -42,7 +42,7 @@ const About = () => {
             <div className="grid grid-cols-3 gap-6">
               {[
               { num: "12+", label: "Vite Përvojë" },
-              { num: "3000m²", label: "Skela" },
+              { num: "10000m²", label: "Skela" },
               { num: "15+", label: "Punonjës" }].
               map((stat) =>
               <div key={stat.label} className="text-center">
