@@ -34,8 +34,8 @@ const About = () => {
             <p className="font-body text-muted-foreground leading-relaxed mb-4">
               Kompania është themeluar nga grupe profesionistësh të fushës së ndërtimit dhe të sistemeve të skelave me qira, të cilët kanë bashkuar eksperiencën dhe njohuritë e tyre për të sjellë në tregun shqiptar një shërbim profesional dhe të besueshëm.
             </p>
-            <p className="font-body text-muted-foreground leading-relaxed mb-6">
-              Aktualisht Skela e Build SHPK disponon rreth 3000 m² skela profesionale në dispozicion të klientëve. Për projekte më të mëdha, kompania ka mundësinë të importojë deri në tre herë më shumë skela, duke garantuar që çdo projekt të realizohet pa vonesa dhe sipas nevojave të klientit.
+            <p className="font-body text-muted-foreground leading-relaxed mb-6">Aktualisht Skela e Build SHPK disponon rreth 10000 m² skela profesionale në dispozicion të klientëve. Për projekte më të mëdha, kompania ka mundësinë të importojë deri në tre herë më shumë skela, duke garantuar që çdo projekt të realizohet pa vonesa dhe sipas nevojave të klientit.
+
             </p>
 
 
