@@ -29,7 +29,7 @@ const About = () => {
             }>
             
             <h2 className="text-5xl md:text-6xl text-foreground mb-6">RRETH NESH</h2>
-            <p className="font-body text-muted-foreground leading-relaxed mb-4">Skela e Build SHPK është një kompani e hapur në Shqipëri në 02.2026, pas më shumë se 12 vitesh eksperiencë pune në Europë në sektorin e ndërtimit dhe të sistemeve të skelave profesionale. Për shumë vite kemi ushtruar profesionin tonë me standarde të larta dhe cilësi të veçantë në vende si Zvicra, Italia, Gjermania dhe Austria, duke fituar përvojë të vlefshme dhe praktika moderne pune.
+            <p className="font-body text-muted-foreground leading-relaxed mb-4">Skela e Build SHPK është një kompani e hapur në Shqipëri në 2026, pas më shumë se 12 vitesh eksperiencë pune në Europë në sektorin e ndërtimit dhe të sistemeve të skelave profesionale. Për shumë vite kemi ushtruar profesionin tonë me standarde të larta dhe cilësi të veçantë në vende si Zvicra, Italia, Gjermania dhe Austria, duke fituar përvojë të vlefshme dhe praktika moderne pune.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed mb-4">
               Kompania është themeluar nga grupe profesionistësh të fushës së ndërtimit dhe të sistemeve të skelave me qira, të cilët kanë bashkuar eksperiencën dhe njohuritë e tyre për të sjellë në tregun shqiptar një shërbim profesional dhe të besueshëm.
